@@ -4,7 +4,7 @@
 | ----- | ----- |
 | **dev** | [![Build Status](https://travis-ci.org/acme-freight/logistics-wizard-recommendation.svg?branch=dev)](https://travis-ci.org/acme-freight/logistics-wizard-recommendation) [![Coverage Status](https://coveralls.io/repos/github/acme-freight/logistics-wizard-recommendation/badge.svg?branch=dev)](https://coveralls.io/github/acme-freight/logistics-wizard-recommendation?branch=dev)|
 
-This service is part of the larger [Logistics Wizard](https://github.com/acme-freight/logistics-wizard) project.
+This service is part of the larger [Logistics Wizard](https://github.com/strongloop/acme-freight) project.
 
 ## Overview
 
@@ -58,7 +58,7 @@ For demo purpose, the *Recommend* action can be called interactively to inject a
 
 1. If you do not already have a Bluemix account, [sign up here](https://ibm.com/bluemix)
 
-1. The recommendation service depends on the [Controller](https://github.com/acme-freight/logistics-wizard-controller) and [ERP](https://github.com/acme-freight/logistics-wizard-erp) microservices. Make sure to deploy them first.
+1. The recommendation service depends on the [Controller](https://github.com/strongloop/acme-freight-controller) and [ERP](https://github.com/strongloop/acme-freight-erp) microservices. Make sure to deploy them first.
 
 1. In Bluemix, create an instance of the Weather Company Data service
 
@@ -99,7 +99,7 @@ For demo purpose, the *Recommend* action can be called interactively to inject a
 1. Clone the app to your local environment from your terminal using the following command:
 
   ```
-  git clone https://github.com/acme-freight/logistics-wizard-recommendation.git
+  git clone https://github.com/strongloop/acme-freight-recommendation.git
   ```
 
 1. `cd` into the checkout directory
