@@ -160,4 +160,4 @@ and invoke actions.
 
 ## License
 
-See [License.txt](License.txt) for license information.
+See [LICENSE](LICENSE) for license information.
