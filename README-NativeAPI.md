@@ -25,7 +25,31 @@ You're resulting page should look like the image below:
 
 ![API create](readme-assets/create-api.png)
 
-Scroll down, make sure Enable CORS option is checked and then click Save button:
+Scroll down
+
+- Enable the "Require ... via API key" option; default options are suitable
+- Make sure "Enable CORS..." option is checked
+- Click Save button
 
 ![API save](readme-assets/save-api.png)
 
+### Create API Key
+
+To create an API key, which is required to access the endpoints, click the "Sharing" link on the left of your screen shown below:
+
+![Sharing](readme-assets/sharing.png)
+
+From this screen, click the "Create API Key" button.
+
+In the Create API Key screen, do the following:
+
+- Name your API key
+- Take note of your API key
+- Click the show checkbox and take note of your API key secret
+- Click "Create":
+
+![Create API Key](readme-assets/create-api-key.png)
+
+The last thing you'll need is the full path to your APIs, which you can find on the summary page (shown below as your 'Route'), along with all sorts of other useful information, including analytics:
+
+![Summary](readme-assets/summary.png)
