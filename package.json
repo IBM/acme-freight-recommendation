@@ -1,5 +1,5 @@
 {
-  "name": "logistics-wizard-recommendation",
+  "name": "acme-freight-recommendation",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {

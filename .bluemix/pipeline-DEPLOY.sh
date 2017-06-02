@@ -27,18 +27,18 @@ esac
 export CONTROLLER_SERVICE=https://$CONTROLLER_SERVICE_APP_NAME$domain
 
 # create a Weather service
-cf create-service weatherinsights Free-v2 logistics-wizard-weatherinsights
+cf create-service weatherinsights Free-v2 acme-freight-weatherinsights
 # create a key for this service
-cf create-service-key logistics-wizard-weatherinsights for-openwhisk
+cf create-service-key acme-freight-weatherinsights for-openwhisk
 # retrieve the URL - it contains credentials + API URL
-export WEATHER_SERVICE=`cf service-key logistics-wizard-weatherinsights for-openwhisk | grep \"url\" | awk -F '"' '{print $4}'`
+export WEATHER_SERVICE=`cf service-key acme-freight-weatherinsights for-openwhisk | grep \"url\" | awk -F '"' '{print $4}'`
 
 # create a Cloudant service
-cf create-service cloudantNoSQLDB Lite logistics-wizard-recommendation-db
+cf create-service cloudantNoSQLDB Lite acme-freight-recommendation-db
 # create a key for this service
-cf create-service-key logistics-wizard-recommendation-db for-openwhisk
+cf create-service-key acme-freight-recommendation-db for-openwhisk
 # retrieve the URL - it contains credentials + API URL
-export CLOUDANT_URL=`cf service-key logistics-wizard-recommendation-db for-openwhisk | grep \"url\" | awk -F '"' '{print $4}'`
+export CLOUDANT_URL=`cf service-key acme-freight-recommendation-db for-openwhisk | grep \"url\" | awk -F '"' '{print $4}'`
 
 # Deploy the OpenWhisk triggers/actions/rules
 ./deploy.sh --uninstall

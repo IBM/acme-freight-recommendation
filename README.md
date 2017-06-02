@@ -1,10 +1,6 @@
-# Logistics Wizard - Weather Recommendation
+# Acme Freight - Weather Recommendation
 
-| **master** | [![Build Status](https://travis-ci.org/IBM-Bluemix/logistics-wizard-recommendation.svg?branch=master)](https://travis-ci.org/IBM-Bluemix/logistics-wizard-recommendation) [![Coverage Status](https://coveralls.io/repos/github/IBM-Bluemix/logistics-wizard-recommendation/badge.svg?branch=master)](https://coveralls.io/github/IBM-Bluemix/logistics-wizard-recommendation?branch=master) |
-| ----- | ----- |
-| **dev** | [![Build Status](https://travis-ci.org/IBM-Bluemix/logistics-wizard-recommendation.svg?branch=dev)](https://travis-ci.org/IBM-Bluemix/logistics-wizard-recommendation) [![Coverage Status](https://coveralls.io/repos/github/IBM-Bluemix/logistics-wizard-recommendation/badge.svg?branch=dev)](https://coveralls.io/github/IBM-Bluemix/logistics-wizard-recommendation?branch=dev)|
-
-This service is part of the larger [Logistics Wizard](https://github.com/IBM-Bluemix/logistics-wizard) project.
+This service is part of the larger [Acme Freight](https://github.com/ibm/acme-freight) project.
 
 ## Overview
 
@@ -26,80 +22,52 @@ It is built with OpenWhisk highlighting how OpenWhisk can be used to implement a
 
 For demo purpose, the *Recommend* action can be called interactively to inject a weather event into the system.
 
-![Architecture](http://g.gravizo.com/g?
-  digraph G {
-    node [fontname = "helvetica"]
-    rankdir=TB
-    weather -> recommend
-    recommend -> database
-    database -> notify
-    ui -> retrieve
-    ui -> observations
-    retrieve -> database
-    ui -> acknowledge
-    acknowledge -> database
-    recommend -> erp
-    ui -> erp
-    {rank=same; recommend -> notify -> retrieve -> retrieve [style=invis] }
-    {rank=source; weather -> erp -> ui [style=invis]}
-    weather [shape=rect label="Weather Company\\nData service" style=filled color="%234E96DB" fontcolor=white]
-    recommend [label="Recommend" color="%232e8c70" style=filled fontcolor=white]
-    notify [label="Notify" color="%232e8c70" style=filled fontcolor=white]
-    retrieve [label="Retrieve" color="%232e8c70" style=filled fontcolor=white]
-    acknowledge [label="Acknowledge" color="%232e8c70" style=filled fontcolor=white]
-    observations [label="Observations" color="%232e8c70" style=filled fontcolor=white]
-    erp [shape=rect label="ERP service" color="%238ec843" style=filled]
-    ui [label="Dashboard" color="%23e8c228" style=filled]
-    database [shape=circle width=1 fixedsize=true style=filled color="%234E96DB" fontcolor=white label="Database"]
-  }
-)
-
 ## Running the app on Bluemix
 
 1. If you do not already have a Bluemix account, [sign up here](https://ibm.com/bluemix)
 
-1. The recommendation service depends on the [Controller](https://github.com/IBM-Bluemix/logistics-wizard-controller) and [ERP](https://github.com/IBM-Bluemix/logistics-wizard-erp) microservices. Make sure to deploy them first.
+1. The recommendation service depends on the [Controller](https://github.com/ibm/acme-freight-controller) and [ERP](https://github.com/ibm/acme-freight-erp) microservices. Make sure to deploy them first.
 
 1. In Bluemix, create an instance of the Weather Company Data service
 
   ```
-  cf create-service weatherinsights Free-v2 logistics-wizard-weatherinsights
+  cf create-service weatherinsights Free-v2 acme-freight-weatherinsights
   ```
 
 1. Create a set of credentials for this service
 
   ```
-  cf create-service-key logistics-wizard-weatherinsights for-openwhisk
+  cf create-service-key acme-freight-weatherinsights for-openwhisk
   ```
 
 1. View the credentials and take note of the `url` value
 
   ```
-  cf service-key logistics-wizard-weatherinsights for-openwhisk
+  cf service-key acme-freight-weatherinsights for-openwhisk
   ```
 
 1. Create an instance of Cloudant to store the recommendations
 
   ```
-  cf create-service cloudantNoSQLDB Lite logistics-wizard-recommendation-db
+  cf create-service cloudantNoSQLDB Lite acme-freight-recommendation-db
   ```
 
 1. Create a set of credentials for this service
 
   ```
-  cf create-service-key logistics-wizard-recommendation-db for-openwhisk
+  cf create-service-key acme-freight-recommendation-db for-openwhisk
   ```
 
 1. View the credentials and take note of the `url` value
 
   ```
-  cf service-key logistics-wizard-recommendation-db for-openwhisk
+  cf service-key acme-freight-recommendation-db for-openwhisk
   ```
 
 1. Clone the app to your local environment from your terminal using the following command:
 
   ```
-  git clone https://github.com/IBM-Bluemix/logistics-wizard-recommendation.git
+  git clone https://github.com/ibm/acme-freight-recommendation.git
   ```
 
 1. `cd` into the checkout directory
@@ -160,4 +128,4 @@ and invoke actions.
 
 ## License
 
-See [License.txt](License.txt) for license information.
+See [LICENSE](LICENSE) for license information.
