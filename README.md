@@ -1,3 +1,7 @@
+| **master** | [![Build Status](https://travis-ci.org/IBM/acme-freight-recommendation.svg?branch=master)](https://travis-ci.org/IBM/acme-freight-recommendation) [![Coverage Status](https://coveralls.io/repos/github/IBM/acme-freight-recommendation/badge.svg?branch=master)](https://coveralls.io/github/IBM/acme-freight-recommendation?branch=master) |
+| ----- | ----- |
+| **dev** | [![Build Status](https://travis-ci.org/IBM/acme-freight-recommendation.svg?branch=dev)](https://travis-ci.org/IBM/acme-freight-recommendation) [![Coverage Status](https://coveralls.io/repos/github/IBM/acme-freight-recommendation/badge.svg?branch=dev)](https://coveralls.io/github/IBM/acme-freight-recommendation?branch=dev)|
+
 # Acme Freight - Weather Recommendation
 
 This service is part of the larger [Acme Freight](https://github.com/ibm/acme-freight) project.
